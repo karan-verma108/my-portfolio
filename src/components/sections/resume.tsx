@@ -29,7 +29,7 @@ const RESUME_HIGHLIGHTS = [
   },
   {
     label: "Last updated",
-    value: "July 2024",
+    value: "July 2026",
   },
 ];
 
@@ -116,7 +116,7 @@ export function ResumeSection() {
                   <div className="flex flex-wrap items-center gap-2">
                     <Pill accent="electric">PDF · A4</Pill>
                     <Pill variant="muted">~85 KB</Pill>
-                    <Pill variant="muted">Updated July 2024</Pill>
+                    <Pill variant="muted">Updated July 2026</Pill>
                   </div>
                   <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                     {OWNER.name} — {OWNER.role}

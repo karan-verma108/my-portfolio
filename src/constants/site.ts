@@ -1,22 +1,6 @@
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Mail,
-  FileText,
-  Code2,
-  type LucideIcon,
-} from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, FileText } from "lucide-react";
 
-import type {
-  AccentToken,
-  ExperienceItem,
-  JourneyEntry,
-  NavItem,
-  Project,
-  SkillCategory,
-  SocialLink,
-} from "@/types/portfolio";
+import type { AccentToken, NavItem, SocialLink } from "@/types/portfolio";
 
 /** Owner identity — single source of truth. */
 export const OWNER = {
@@ -24,8 +8,8 @@ export const OWNER = {
   role: "Frontend Engineer",
   tagline: "Building polished, performant software for the web.",
   yearsExperience: 2,
-  location: "Bengaluru, India",
-  email: process.env.OWNER_EMAIL,
+  location: "Punjab, India",
+  email: process.env.NEXT_PUBLIC_OWNER_EMAIL,
   resumeUrl: "/resume.pdf",
   availability: "Open to senior frontend & platform roles",
 } as const;
@@ -58,26 +42,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     handle: "in/karan-verma108",
   },
   {
-    id: "twitter",
-    label: "Twitter / X",
-    href: "https://twitter.com/karan_verma108",
-    icon: Twitter,
-    handle: "@karan_verma108",
-  },
-  {
     id: "email",
     label: "Email",
-    href: `mailto:${process.env.OWNER_EMAIL}`,
+    href: `mailto:${process.env.NEXT_PUBLIC_OWNER_EMAIL}`,
     icon: Mail,
-    handle: process.env.OWNER_EMAIL,
+    handle: process.env.NEXT_PUBLIC_OWNER_EMAIL,
     mail: true,
-  },
-  {
-    id: "leetcode",
-    label: "LeetCode",
-    href: "https://leetcode.com/karan-verma108",
-    icon: Code2,
-    handle: "/karan-verma108",
   },
   {
     id: "resume",
