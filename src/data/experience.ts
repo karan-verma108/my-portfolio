@@ -4,18 +4,19 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     id: "current",
     role: "Software Developer",
-    company: "Confidential SaaS Company",
-    location: "Bengaluru, India · Hybrid",
-    period: "2023 — Present",
+    company: "Confidential",
+    location: "Punjab, India · Onsite",
+    period: "2024 — Present",
     summary:
-      "Owning frontend architecture and serverless APIs for a multi-tenant product used by thousands of daily active users.",
+      "Developed and maintained scalable React/Next.js web applications with AWS serverless backends, reusable UI components, and centralized state management for end-to-end feature delivery.",
     highlights: [
-      "Architected a reusable React + Next.js component system that cut feature delivery time by 35% across three product squads.",
-      "Designed and shipped REST APIs on API Gateway + Lambda, with DynamoDB single-table schemas that hold up to 10M+ records.",
-      "Migrated a Redux-Toolkit-heavy surface to RTK Query, reducing boilerplate by ~40% and removing an entire class of stale-state bugs.",
-      "Authored AWS CDK constructs for repeatable environments (dev / staging / prod) with mandatory code reviews and drift detection.",
-      "Drove a performance initiative that lifted Lighthouse performance from 71 → 96 on the primary dashboard route via code splitting, image optimization, and edge caching.",
-      "Mentored two junior engineers through pairing, RFC reviews, and a shared frontend playbook that is now the team's source of truth.",
+      "Developed and maintained scalable web applications using React.js, Next.js, JavaScript, and TypeScript.",
+      "Designed and implemented serverless backend services using AWS CDK (TypeScript), AWS Lambda, and Amazon API Gateway.",
+      "Built RESTful APIs and integrated Amazon DynamoDB for scalable data storage and retrieval.",
+      "Worked with Amazon SQS, Amazon S3, Amazon Cognito, and Amazon CloudWatch to build and monitor cloud-native applications.",
+      "Implemented centralized state management using Redux and Redux Toolkit, improving application maintainability.",
+      "Built reusable UI components and integrated frontend applications with backend APIs.",
+      "Collaborated with cross-functional teams in an Agile/Scrum environment to deliver end-to-end features.",
     ],
     stack: [
       "React",
@@ -29,21 +30,5 @@ export const EXPERIENCE: ExperienceItem[] = [
       "TailwindCSS",
     ],
     accent: "electric",
-  },
-  {
-    id: "previous",
-    role: "Frontend Developer",
-    company: "Early-stage Product Studio",
-    location: "Remote",
-    period: "2022 — 2023",
-    summary:
-      "Built and shipped customer-facing web apps from zero to one — design systems, dashboards, and onboarding flows.",
-    highlights: [
-      "Built the design system foundation (tokens, primitives, theming) used across four client products.",
-      "Implemented responsive layouts that passed WCAG AA audits and supported 320px → ultra-wide viewports without layout shifts.",
-      "Collaborated with designers in Figma to translate specs into accessible, animation-rich components with Framer Motion.",
-    ],
-    stack: ["React", "TypeScript", "TailwindCSS", "Framer Motion", "Zustand", "Figma"],
-    accent: "violet",
   },
 ];
