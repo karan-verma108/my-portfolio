@@ -64,13 +64,13 @@ export const PROJECTS: Project[] = [
     links: [
       {
         label: "GitHub",
-        href: "https://github.com/aaravmehta/parivaar",
+        href: "https://github.com/karan-verma108/parivaar",
         icon: Github,
         variant: "primary",
       },
       {
         label: "Live Demo",
-        href: "https://parivaar.example.com",
+        href: "https://parivaar-six.vercel.app/",
         icon: ExternalLink,
         variant: "ghost",
       },
