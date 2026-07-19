@@ -128,7 +128,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
                         stiffness: 380,
                         damping: 30,
                       }}
-                      className="absolute inset-0 rounded-full bg-foreground/[0.06]"
+                      className="absolute inset-0 rounded-full bg-foreground/6"
                     />
                   ) : null}
                   <span className="relative font-mono text-[10px] text-muted-foreground/60">
@@ -144,7 +144,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
           <div className="flex items-center gap-2">
             <button
               onClick={onCommandOpen}
-              className="hidden items-center gap-2 rounded-full border border-border bg-foreground/[0.03] px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground md:inline-flex"
+              className="hidden items-center gap-2 rounded-full border border-border bg-foreground/3 px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground md:inline-flex"
               aria-label="Open command palette"
             >
               <Command className="h-3 w-3" />
@@ -160,7 +160,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
                 <button
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-foreground/[0.03] text-foreground lg:hidden"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-foreground/3 text-foreground lg:hidden"
                   aria-label="Open menu"
                 >
                   <Menu className="h-4 w-4" />
@@ -181,7 +181,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
                       <a
                         href={`#${item.id}`}
                         onClick={(e) => handleNavClick(e, item.id)}
-                        className="group flex items-center justify-between rounded-xl px-4 py-3 text-base transition-colors hover:bg-foreground/[0.04]"
+                        className="group flex items-center justify-between rounded-xl px-4 py-3 text-base transition-colors hover:bg-foreground/4"
                       >
                         <span className="flex items-center gap-3">
                           <span className="font-mono text-xs text-muted-foreground">
