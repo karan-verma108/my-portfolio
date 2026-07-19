@@ -1,7 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { Command, Menu, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -45,7 +50,10 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
     setHidden(direction === "down");
   }, [direction, scrolled, mobileOpen]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
     e.preventDefault();
     setMobileOpen(false);
     const el = document.getElementById(id);
@@ -66,10 +74,15 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
       <div
         className={cn(
           "transition-all duration-500",
-          scrolled ? "border-b border-border/60 bg-background/70 backdrop-blur-xl" : "bg-transparent"
+          scrolled
+            ? "border-b border-border/60 bg-background/70 backdrop-blur-xl"
+            : "bg-transparent",
         )}
       >
-        <Container size="xl" className="flex h-16 items-center justify-between gap-4 sm:h-18">
+        <Container
+          size="xl"
+          className="flex h-16 items-center justify-between gap-4 sm:h-18"
+        >
           {/* Brand */}
           {/* <a
             href="#home"
@@ -89,7 +102,10 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
           </a> */}
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <nav
+            className="hidden items-center gap-1 lg:flex"
+            aria-label="Primary"
+          >
             {NAV_ITEMS.map((item) => {
               const isActive = active === item.id;
               return (
@@ -101,13 +117,17 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
                     "relative inline-flex items-center rounded-full px-3.5 py-1.5 text-sm transition-colors",
                     isActive
                       ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
                   )}
                 >
                   {isActive ? (
                     <motion.span
                       layoutId="nav-active"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
                       className="absolute inset-0 rounded-full bg-foreground/[0.06]"
                     />
                   ) : null}
@@ -146,9 +166,14 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
                   <Menu className="h-4 w-4" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[88vw] max-w-sm border-border bg-background p-0">
+              <SheetContent
+                side="right"
+                className="w-[88vw] max-w-sm border-border bg-background p-0"
+              >
                 <SheetHeader className="border-b border-border px-6 py-5 text-left">
-                  <SheetTitle className="font-display text-base">Navigation</SheetTitle>
+                  <SheetTitle className="font-display text-base">
+                    Navigation
+                  </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-1 px-3 py-4">
                   {NAV_ITEMS.map((item, idx) => (
@@ -159,7 +184,9 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
                         className="group flex items-center justify-between rounded-xl px-4 py-3 text-base transition-colors hover:bg-foreground/[0.04]"
                       >
                         <span className="flex items-center gap-3">
-                          <span className="font-mono text-xs text-muted-foreground">{item.index}</span>
+                          <span className="font-mono text-xs text-muted-foreground">
+                            {item.index}
+                          </span>
                           <span className="font-medium">{item.label}</span>
                         </span>
                         <span className="text-muted-foreground/40 transition-transform group-hover:translate-x-1">
