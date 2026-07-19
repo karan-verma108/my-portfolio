@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Aarav Mehta — Frontend Engineer",
-    short_name: "Aarav Mehta",
+    name: "Karan Verma — Frontend Engineer",
+    short_name: "Karan Verma",
     description:
       "Frontend Engineer with 2+ years crafting scalable React, Next.js, and AWS serverless systems.",
     start_url: "/",

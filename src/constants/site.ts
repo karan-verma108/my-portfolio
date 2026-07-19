@@ -8,11 +8,19 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import type { AccentToken, ExperienceItem, JourneyEntry, NavItem, Project, SkillCategory, SocialLink } from "@/types/portfolio";
+import type {
+  AccentToken,
+  ExperienceItem,
+  JourneyEntry,
+  NavItem,
+  Project,
+  SkillCategory,
+  SocialLink,
+} from "@/types/portfolio";
 
 /** Owner identity — single source of truth. */
 export const OWNER = {
-  name: "Aarav Mehta",
+  name: "Karan Verma",
   role: "Frontend Engineer",
   tagline: "Building polished, performant software for the web.",
   yearsExperience: 2,

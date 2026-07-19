@@ -18,7 +18,10 @@ import {
 import { Container } from "@/components/primitives/container";
 import { Section } from "@/components/primitives/section";
 import { SectionHeading } from "@/components/primitives/section-heading";
-import { AnimatedSection, AnimatedItem } from "@/components/primitives/animated-section";
+import {
+  AnimatedSection,
+  AnimatedItem,
+} from "@/components/primitives/animated-section";
 import { Button } from "@/components/primitives/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -59,7 +62,9 @@ type SubmitState =
   | { status: "error"; message: string };
 
 export function ContactSection() {
-  const [submitState, setSubmitState] = React.useState<SubmitState>({ status: "idle" });
+  const [submitState, setSubmitState] = React.useState<SubmitState>({
+    status: "idle",
+  });
 
   const {
     register,
@@ -97,7 +102,10 @@ export function ContactSection() {
     } catch (err) {
       setSubmitState({
         status: "error",
-        message: err instanceof Error ? err.message : "Something went wrong. Please try again.",
+        message:
+          err instanceof Error
+            ? err.message
+            : "Something went wrong. Please try again.",
       });
     }
   };
@@ -134,7 +142,8 @@ export function ContactSection() {
                       Direct line
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Prefer email? Reach me directly — I usually reply within a day.
+                      Prefer email? Reach me directly — I usually reply within a
+                      day.
                     </p>
                   </div>
 
@@ -170,7 +179,9 @@ export function ContactSection() {
                         <Clock className="h-3 w-3" />
                         Timezone
                       </div>
-                      <div className="mt-1 text-sm font-medium text-foreground">IST · UTC+5:30</div>
+                      <div className="mt-1 text-sm font-medium text-foreground">
+                        IST · UTC+5:30
+                      </div>
                     </div>
                   </div>
 
@@ -180,27 +191,35 @@ export function ContactSection() {
                       Elsewhere
                     </h4>
                     <ul className="space-y-1.5">
-                      {SOCIAL_LINKS.filter((s) => s.id !== "resume").map((link) => {
-                        const Icon = link.icon;
-                        return (
-                          <li key={link.id}>
-                            <a
-                              href={link.href}
-                              target={link.href.startsWith("http") ? "_blank" : undefined}
-                              rel="noopener noreferrer"
-                              className="group flex items-center gap-3 rounded-lg px-2 py-1.5 text-sm text-foreground/80 transition-colors hover:bg-foreground/[0.04] hover:text-foreground"
-                            >
-                              <Icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent-electric" />
-                              <span className="font-medium">{link.label}</span>
-                              {link.handle ? (
-                                <span className="ml-auto text-xs text-muted-foreground">
-                                  {link.handle}
+                      {SOCIAL_LINKS.filter((s) => s.id !== "resume").map(
+                        (link) => {
+                          const Icon = link.icon;
+                          return (
+                            <li key={link.id}>
+                              <a
+                                href={link.href}
+                                target={
+                                  link.href.startsWith("http")
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-3 rounded-lg px-2 py-1.5 text-sm text-foreground/80 transition-colors hover:bg-foreground/[0.04] hover:text-foreground"
+                              >
+                                <Icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent-electric" />
+                                <span className="font-medium">
+                                  {link.label}
                                 </span>
-                              ) : null}
-                            </a>
-                          </li>
-                        );
-                      })}
+                                {link.handle ? (
+                                  <span className="ml-auto text-xs text-muted-foreground">
+                                    {link.handle}
+                                  </span>
+                                ) : null}
+                              </a>
+                            </li>
+                          );
+                        },
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -222,7 +241,12 @@ export function ContactSection() {
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
-                          transition={{ duration: 0.5, delay: 0.1, type: "spring", stiffness: 200 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: 0.1,
+                            type: "spring",
+                            stiffness: 200,
+                          }}
                           className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent-emerald/15 text-accent-emerald"
                         >
                           <CheckCircle2 className="h-8 w-8" />
@@ -231,8 +255,8 @@ export function ContactSection() {
                           Message received.
                         </h3>
                         <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                          Thanks for reaching out. I&apos;ll get back to you at the email you
-                          provided — usually within a day.
+                          Thanks for reaching out. I&apos;ll get back to you at
+                          the email you provided — usually within a day.
                         </p>
                         <div className="mt-6 flex gap-3">
                           <Button
@@ -248,7 +272,9 @@ export function ContactSection() {
                             size="md"
                             magnetic={false}
                             onClick={() =>
-                              document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })
+                              document
+                                .getElementById("home")
+                                ?.scrollIntoView({ behavior: "smooth" })
                             }
                           >
                             Back to top
@@ -266,17 +292,25 @@ export function ContactSection() {
                         noValidate
                         className="grid gap-5 sm:grid-cols-2"
                       >
-                        <Field label="Your name" htmlFor="name" error={errors.name?.message}>
+                        <Field
+                          label="Your name"
+                          htmlFor="name"
+                          error={errors.name?.message}
+                        >
                           <Input
                             id="name"
-                            placeholder="Aarav Mehta"
+                            placeholder="Karan Verma"
                             autoComplete="name"
                             aria-invalid={!!errors.name}
                             {...register("name")}
                           />
                         </Field>
 
-                        <Field label="Email" htmlFor="email" error={errors.email?.message}>
+                        <Field
+                          label="Email"
+                          htmlFor="email"
+                          error={errors.email?.message}
+                        >
                           <Input
                             id="email"
                             type="email"
@@ -377,7 +411,10 @@ interface FieldProps {
 function Field({ label, htmlFor, error, className, children }: FieldProps) {
   return (
     <div className={cn("space-y-1.5", className)}>
-      <Label htmlFor={htmlFor} className="text-xs font-medium text-foreground/80">
+      <Label
+        htmlFor={htmlFor}
+        className="text-xs font-medium text-foreground/80"
+      >
         {label}
       </Label>
       {children}

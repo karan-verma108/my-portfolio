@@ -23,8 +23,8 @@ const siteUrl = "https://portfolio.example.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Aarav Mehta — Frontend Engineer & Cloud-Native Builder",
-    template: "%s · Aarav Mehta",
+    default: "Karan Verma — Frontend Engineer & Cloud-Native Builder",
+    template: "%s · Karan Verma",
   },
   description:
     "Frontend Engineer with 2+ years crafting scalable React, Next.js, and AWS serverless systems. Focused on performance, accessibility, and developer experience.",
@@ -36,34 +36,32 @@ export const metadata: Metadata = {
     "AWS CDK",
     "Serverless",
     "UI Engineering",
-    "Aarav Mehta",
+    "Karan Verma",
   ],
-  authors: [{ name: "Aarav Mehta" }],
-  creator: "Aarav Mehta",
-  publisher: "Aarav Mehta",
-  applicationName: "Aarav Mehta — Portfolio",
+  authors: [{ name: "Karan Verma" }],
+  creator: "Karan Verma",
+  publisher: "Karan Verma",
+  applicationName: "Karan Verma — Portfolio",
   alternates: {
     canonical: "/",
   },
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: "/favicon.svg",
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Aarav Mehta — Frontend Engineer & Cloud-Native Builder",
+    title: "Karan Verma — Frontend Engineer & Cloud-Native Builder",
     description:
       "Scalable React, Next.js, and AWS serverless systems built with craftsmanship, performance, and accessibility in mind.",
     url: siteUrl,
-    siteName: "Aarav Mehta",
+    siteName: "Karan Verma",
     type: "profile",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aarav Mehta — Frontend Engineer & Cloud-Native Builder",
+    title: "Karan Verma — Frontend Engineer & Cloud-Native Builder",
     description:
       "Scalable React, Next.js, and AWS serverless systems built with craftsmanship, performance, and accessibility in mind.",
     creator: "@aaravmehta",
@@ -96,7 +94,7 @@ export const viewport: Viewport = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Aarav Mehta",
+  name: "Karan Verma",
   jobTitle: "Frontend Engineer",
   description:
     "Frontend Engineer specializing in React, Next.js, TypeScript, and AWS serverless architectures.",
@@ -131,7 +129,9 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
       </head>
       <body
