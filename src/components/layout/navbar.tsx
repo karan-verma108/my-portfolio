@@ -71,7 +71,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
       >
         <Container size="xl" className="flex h-16 items-center justify-between gap-4 sm:h-18">
           {/* Brand */}
-          <a
+          {/* <a
             href="#home"
             onClick={(e) => handleNavClick(e, "home")}
             className="group inline-flex items-center gap-2.5 text-sm font-semibold tracking-tight"
@@ -86,7 +86,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
                 {OWNER.role}
               </span>
             </span>
-          </a>
+          </a> */}
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
